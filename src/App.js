@@ -5,6 +5,7 @@ import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './components/MenuComponent';
 
 import { DISHES } from './shared/dishes';
+import Main from './components/MainComponent';
 
 class App extends Component {
   constructor(props) {
@@ -16,27 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Menu dishes={this.state.dishes} />
-      <Navbar dark color="primary">
-      <img src={logo} className="App-logo" alt="logo" width= "300px" display= "inline"/>
-          <div className="container">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-          </div>
-        </Navbar>
-        <header className="App-header">
-          
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Main />
       </div>
     );
   }
